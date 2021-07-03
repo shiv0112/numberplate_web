@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<title>Car Fetcher</title>
+
+<script>
+  function lw(){
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET","http://192.168.43.243:5000/detect",true);
+        xhr.send();
+        xhr.onload = function( ){
+	var out = xhr.responseText;
+	document.getElementById('out').innerHTML = out;
+  document.getElementById("im1").src="{{url_for('static', filename='styles/number.jpeg')}}";
+  document.getElementById("im2").src="{{url_for('static', filename='styles/carcont.jpeg')}}";
+                }
+}
+</script>
+
+<link rel="stylesheet" href="{{url_for('static', filename='styles/design2.css')}}">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body class="back">
+    <img src="{{url_for('static', filename='styles/kub.png')}}" class="header"/>
+    </br>
+    <div class='overlay'></div>
+  
+    <div id="header"></div>
+  <div id="container">
+      <div id="first">
+        <img src="{{url_for('static', filename='styles/demo1.png')}}" id="im1"> </img>
+        <img src="{{url_for('static', filename='styles/demo2.png')}}" id="im2"> </img>
+      </div>
+      <div id="second">
+      <pre id='out'>
+      <h3>Your details:</h3>
+  </pre>
+  <button onclick="lw();" id="btn">Predict</button>
+      </div>
+  </div>
+    
+    </div>
+    </div>
+       
+    </body>
+    </html> 

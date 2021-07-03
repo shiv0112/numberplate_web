@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<title>Car Fetcher</title>
+
+<script src="{{url_for('static', filename='styles/script.js')}}"></script>
+
+<link rel="stylesheet" href="{{url_for('static', filename='styles/design.css')}}">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body class="back">
+  <div class='overlay'></div>
+  <div id="main">
+    <img src="{{url_for('static', filename='styles/kub.png')}}" class="header"/>
+  </br>
+  <div id=form>
+  <form action="http://192.168.43.243:5000/uploaded" method = "POST" enctype = "multipart/form-data">
+    <input id="uploadID" type="file" name='file' accept="video/*">
+    <p>Click to upload or you can drag your video here...</p>
+    <button type="submit">Upload</button>
+  </form>
+  </div>
+  </div>
+     
+  </body>
+  </html> 

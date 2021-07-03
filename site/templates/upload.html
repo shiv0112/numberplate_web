@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<title>Car Fetcher</title>
+
+<script src="{{url_for('static', filename='styles/script.js')}}"></script>
+<script>
+  function redirect() {
+  location.replace("http://192.168.43.243:5000/model_predict")
+}
+</script>
+
+<link rel="stylesheet" href="{{url_for('static', filename='styles/design1.css')}}">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body class="back">
+  <div class='overlay'></div>
+  <div id="main">
+    <img src="{{url_for('static', filename='styles/kub.png')}}" class="header"/>
+    </br>
+  </br>
+  <div class="go">
+    <p id="run">
+        Your File has been successfully uploaded
+    <video width="500" height="400" controls autoplay>
+    <source src="{{url_for('static', filename='new.mp4')}}" type="video/mp4">
+    Video not supported
+  </video>
+  </p>
+  <button onclick="redirect();" class="btn">Inspect your car details.</button>
+  </div>
+  </div>
+  </body>
+  </html> 
