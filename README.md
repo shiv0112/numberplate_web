@@ -34,3 +34,6 @@ This is the car registration API through which car details are being fetched:
 -->How to build webpages via Flask module
 
 -->How to detect number plate via pyTessaract
+
+For elaborated description read my blog:
+https://srivastavashiv0112.medium.com/car-number-plate-detection-and-information-retrieval-web-app-1a58aaa9c592
